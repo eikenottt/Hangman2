@@ -279,6 +279,7 @@ function addWordsToOrdBok(e){
 function initializeWords(){
     let words = ordboka.split(" \n");
     words.forEach(word => ordBok.push(word.split("")));
+    localStorage.setItem('storage', JSON.stringify(ordBok));
 }
 
 function addNick(e) {
