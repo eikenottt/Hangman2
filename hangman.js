@@ -1,10 +1,96 @@
-
+const ordboka = `SYKKEL 
+FISK 
+LØK 
+MOTORSAG 
+BELTE 
+BLENDER 
+DONAU 
+FOSSEFALL 
+KÅL 
+BRØD 
+ØRKEN 
+VELTEPETTER 
+RASPEBALLER 
+MOZZARELLA 
+MILLENIUM 
+MATPAKKE 
+JAZZ 
+HANGMAN 
+GULROT 
+BANAN 
+SLALOM 
+LØPER 
+MISSISSIPPI 
+INDIANER 
+ZORO 
+BIE 
+KAMELON 
+URTER 
+BJØRN 
+VEGGLUS 
+SAU 
+BIBEL 
+KOMLA 
+JOLLE 
+BUTIKK 
+VEGGFLIS 
+BMW 
+HOGGORM 
+SAGFLIS 
+LADBARMOTORVOGN 
+HOSTE 
+MONOKKELVERK 
+BIL 
+STOL 
+KAVIAR 
+KÅLROT 
+HAGEMØBLER 
+VEGG 
+GALHØPIGGEN 
+BANAN 
+VINDMØLLE 
+MOTORSAG 
+OST 
+BARBERHØVEL 
+MINNESMERKE 
+KULL 
+VINKEL 
+CURLING 
+VISESANG 
+PÅSKE 
+PÅSKEHARE 
+MIDDAG 
+YNGLE 
+QUIZ 
+RISLAPPER 
+ÅPNE 
+PÆRE 
+EPLEPAI 
+JULEPRESANG 
+KRITT 
+BAMSEMUMS 
+HANEKAM 
+BUKKERITT 
+VILLSVIN 
+SNØSTORM 
+KLIPPFISK 
+GRØTRIS 
+SYKKELSTATIV 
+NØKKELHULL 
+FOLKEMUSIKK 
+BRUSKASSE 
+VUGGESANG 
+RASTEPLASS 
+FRITEKNIKK 
+BURSDAG`;
 
 let chosenLetters;
 
 let guessedLetters = [], wrongLetters = [], allLetters = [];
 
-let ordBok = [["S", "Y", "K", "K", "E", "L"]];
+let ordBok = [];
+
+initializeWords();
 
 let fullforteOrd = [];
 
@@ -188,6 +274,11 @@ function addWordsToOrdBok(e){
     getPossibleScore();
     writeScores(scoreBoard);
     ordbok.value = "";
+}
+
+function initializeWords(){
+    let words = ordboka.split(" \n");
+    words.forEach(word => ordBok.push(word.split("")));
 }
 
 function addNick(e) {
