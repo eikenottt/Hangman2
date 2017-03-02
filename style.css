@@ -1,0 +1,94 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Open Sans', "Helvetica Neue", sans-serif;
+    background: url("hangman_s_tree_by_jenova87-d8w0e6y.jpeg") no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box {
+    width: 400px;
+    height: auto;
+    background: rgba(3, 3, 3, 0.16);
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px #333333;
+    padding-bottom: 30px;
+}
+
+#box1 {
+    order: 2;
+}
+#box2 {
+    order: 1;
+}
+#box3 {
+    order: 3;
+}
+
+input {
+    margin: 20px;
+    padding: 2px;
+}
+
+.error {
+    color: #530f0b;
+    background: rgba(255, 200, 195, 0.57);
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.hurrah {
+    background: rgba(255, 255, 255, 0.59);
+    border-radius: 5px;
+    color: #20401f;
+    font-family: 'Pangolin', sans-serif;
+    padding: 10px 0;
+}
+
+#scores {
+    width: 80%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.scores {
+    background: rgba(0,0,0,0.1);
+    padding: 10px 0;
+    list-style: none;
+}
+.scores:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+#guessed {
+    color: lawngreen;
+}
+
+#wrong {
+    background: rgba(255, 200, 195, 0.57);
+    color: #f1452d;
+    font-weight: bolder;
+}
+
+h3 {
+    margin: 0;
+}
+
+@media screen and (max-width: 1199px) {
+    #box1 {
+        order:1;
+    }
+    #box2 {
+        order:2;
+    }
+}

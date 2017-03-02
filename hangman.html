@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Pangolin" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="box1">
+        <form action="#" class="box" name="nickForm">
+            <h1>Velg brukernavn</h1>
+            <h3 id="nickname">Brukernavn:</h3>
+            <input type="text" name="nick" placeholder="Nickname" autofocus>
+            <input type="submit" name="nickSub" value="Lagre">
+        </form>
+
+        <div class="box">
+            <h1>HangMan</h1>
+            <input type="text" name="guess" placeholder="Gjett en bokstav" oninput="guessLetter(value)">
+
+
+            <h1>Gjettet Rett:</h1>
+            <span id="guessed"></span>
+
+            <h1>Gjettet Feil:</h1>
+            <span id="wrong"></span>
+
+            <h1 id="message"></h1>
+        </div>
+    </div>
+
+    <div class="box" id="box2">
+        <h1>Ledertavle</h1>
+        <ul id="scores">
+
+        </ul>
+    </div>
+
+    <div class="box" id="box3">
+        <h1>Ordbok</h1>
+        <form action="#" autocomplete="off">
+            <input type="text" name="ordbok" placeholder="legg ord til i ordbok">
+            <input type="submit" name="submit" value="Legg Til">
+        </form>
+
+        <h3 id="added"></h3>
+    </div>
+
+    <script type="text/javascript" src="hangman.js"></script>
+
+</body>
+</html>
