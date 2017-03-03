@@ -82,7 +82,8 @@ BRUSKASSE
 VUGGESANG 
 RASTEPLASS 
 FRITEKNIKK 
-BURSDAG`;
+BURSDAG 
+FISKEGRATENG`;
 
 let chosenLetters;
 
@@ -94,14 +95,14 @@ initializeWords();
 
 let fullforteOrd = [];
 
-const input = document.querySelector("[name=guess]");
-const ordbok = document.querySelector("[name=ordbok]");
-const submit = document.querySelector("[name=submit]");
+const input = document.querySelector("[name='guess']");
+const ordbok = document.querySelector("[name='ordbok']");
+const submit = document.querySelector("[name='submit']");
 
 const file = document.querySelector("#file");
 
-const nickForm = document.querySelector("[name=nickForm]");
-const nickin = document.querySelector("[name=nick");
+const nickForm = document.querySelector("[name='nickForm']");
+const nickin = document.querySelector("[name='nick']");
 const nicknameHeader = document.querySelector("#nickname");
 const added = document.querySelector("#added");
 let scoreBoard = [];
