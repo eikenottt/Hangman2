@@ -91,4 +91,14 @@ h3 {
     #box2 {
         order:2;
     }
+    h1 {
+        font-size: 1.1em;
+    }
+    #guessingBox {
+        display: flex;
+        flex-direction: row;
+    }
+    .words {
+        flex: 1;
+    }
 }

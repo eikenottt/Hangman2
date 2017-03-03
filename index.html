@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -19,13 +19,16 @@
         <div class="box">
             <h1>HangMan</h1>
             <input type="text" name="guess" placeholder="Gjett en bokstav" oninput="guessLetter(value)">
-
-
-            <h1>Gjettet Rett:</h1>
-            <span id="guessed"></span>
-
-            <h1>Gjettet Feil:</h1>
-            <span id="wrong"></span>
+            <div id="guessingBox">
+                <div class="words" id="right">
+                    <h1>Gjettet Rett:</h1>
+                    <span id="guessed"></span>
+                </div>
+                <div id="notRight" class="words">
+                    <h1>Gjettet Feil:</h1>
+                    <span id="wrong"></span>
+                </div>
+            </div>
 
             <h1 id="message"></h1>
         </div>
