@@ -119,7 +119,7 @@ function guessLetter(aLetter) {
             if (isDone(guessedLetters, chosenLetters)) {
                 score += thisScore;
                 message.classList.add("hurrah");
-                message.innerHTML = "GRATULERER!!! <br/> Gjett igjen! <br/> Score: " + score + " - Av: " + possibleScore;
+                message.innerHTML = "GRATULERER!!! <br/> Gjett igjen! <br/> Score: " + score + " - Av: " + topScore;
                 fullforteOrd.push(guessedLetters);
                 clearArray();
                 addToArray(scoreBoard, score, numComparator);
