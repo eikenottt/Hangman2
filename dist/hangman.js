@@ -38,7 +38,7 @@ var score = 0;
 
 var possibleScore = 0;
 
-var topScore = 1000;
+var topScore = Math.round(chosenLetters.length * scoreSystem * 100);
 var scorePunishment = topScore * 0.1;
 var thisScore = 0;
 
@@ -49,7 +49,6 @@ ordBok = storage;
 
 scoreBoard = scoreBoardStorage;
 
-getPossibleScore();
 writeScores(scoreBoard);
 
 function isEmpty() {
@@ -58,7 +57,7 @@ function isEmpty() {
 
 var setScore = function setScore() {
     thisScore = Math.round(chosenLetters.length * scoreSystem * 100);
-    scorePunishment = Math.floor(chosenLetters.length * scoreSystem * 100 * 0.1);
+    scorePunishment = Math.floor(thisScore * 0.1);
 };
 
 function reset() {
@@ -221,6 +220,7 @@ function isDone(array1, array2) {
 }
 
 function writeScores(scoreBoard) {
+    getPossibleScore();
     scoreUL.innerHTML = "";
     // let filtered = scoreBoard.map(el => console.log(el.nick))
     scoreBoard.forEach(function (score) {
@@ -301,7 +301,7 @@ function removeItemFromScoreBoard(value) {
 }
 
 function getPossibleScore() {
-    ordBok.forEach(function (e) {
+    fullforteOrd.forEach(function (e) {
         return possibleScore += Math.round(e.length * scoreSystem * 100);
     });
 }
